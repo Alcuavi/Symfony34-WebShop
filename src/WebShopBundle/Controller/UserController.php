@@ -40,4 +40,17 @@ class UserController extends Controller
 
         return new Response("Se ha generado un nuevo usuario" . $user->getId());
     }
+
+
+    /**
+     * @Route("/GetAll")
+     */
+
+    public function getAllUser()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository('WebShopBundle:User');
+        $users = $repository->findAll();
+        return $this->render('@User/Default/users.html.twig', ['users'=>$users]);
+    }
 }

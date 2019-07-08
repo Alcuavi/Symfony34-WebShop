@@ -1,1 +1,23 @@
-Show Users!!
+{% extends "index.html.twig" %}
+
+{% block title %}Users{% endblock %}
+
+{% block body %}
+
+    <h1>Welcome to the user page</h1>
+
+    {% for post in posts %}
+        <div class="card">
+            <div class="card-header">
+                {{ user.title }}
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>{{ user.body}} </p>
+                    <footer class="blockquote-footer">{{ user.createAt|date("m/d/Y H:i:s")}}</footer>
+                </blockquote>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
