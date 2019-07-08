@@ -4,6 +4,7 @@ namespace WebShopBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use WebShopBundle\Entity\User;
 
 
 /**
@@ -25,7 +26,7 @@ class UserController extends Controller
 
     public function addUser()
     {
-        $user = new \WebShopBundle\Entity\User();
+        $user = new User();
         $user -> setName('Alberto');
         $user -> setEmail('Alberto.cuvi@gmail.com');
         $user -> setPassword('asdfg');
