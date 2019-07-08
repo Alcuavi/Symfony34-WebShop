@@ -16,7 +16,7 @@ class UserController extends Controller
     /*
        public function indexAction()
        {
-           return $this->render('WebShopBundle/Default/index.html.twig');
+           return $this->render('WebShopBundle/Default/users.html.twig');
        }
        */
 
