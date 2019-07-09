@@ -53,6 +53,6 @@ class ProductController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('WebShopBundle:Product');
         $products = $repository->findAll();
-        return $this->render('@Product/Default/products.html.twig', ['products'=>$products]);
+        return $this->render('@WebShop/Default/products.html.twig', ['products'=>$products]);
     }
 }

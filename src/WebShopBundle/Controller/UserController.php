@@ -52,6 +52,6 @@ class UserController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('WebShopBundle:User');
         $users = $repository->findAll();
-        return $this->render('@User/Default/users.html.twig', ['users'=>$users]);
+        return $this->render('@WebShop/Default/users.html.twig', ['users'=>$users]);
     }
 }
