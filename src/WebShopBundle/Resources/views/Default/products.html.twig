@@ -6,17 +6,32 @@
 
     <h1>Welcome to the product page</h1>
 
-    {% for product in products %}
-
-        <div>
-            <p class="title">{{ product.model }}</p>
-            <p class="price">{{ product.price }}€</p>
-            <p class="brand">Marca: {{ product.brand }}</p>
-            <p class="quantity">Cantidad: {{ product.quantity }}</p>
-            <p class="type">Tipo: {{ product.type }}</p>
-            <input class="image" type="image" src="/img/{{ product.image }}"/>
-        </div>
-
-    {% endfor %}
+    <div class="container principal">
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Model</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for product in products %}
+                <tr>
+                    <th scope="row">{{product.id}}</th>
+                    <td>{{product.model}}</td>
+                    <td>{{product.brand}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td><img src="/img/{{product.image}}"></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
 {% endblock %}

@@ -16,7 +16,10 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        /*return $this->render('@WebShop/Default/index.html.twig');*/
-        return $this->render('base.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository('WebShopBundle:User');
+        $users = $repository->findAll();
+        return $this->render('@WebShop/Default/index.html.twig', ['users'=>$users]);
+        /*return $this->render('base.html.twig');*/
     }
 }
