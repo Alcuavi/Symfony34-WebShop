@@ -8,6 +8,12 @@
 
     {% for user in users %}
 
+        <div>
+            <p class="name">Nombre: {{ user.name }}</p>
+            <p class="email">Email: {{ user.email }}</p>
+            <p class="password">Contraseña: {{ user.password }}</p>
+        </div>
+
     {% endfor %}
 
 {% endblock %}
