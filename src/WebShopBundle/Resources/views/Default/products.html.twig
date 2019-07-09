@@ -9,11 +9,12 @@
     {% for product in products %}
 
         <div>
-    <p class="title">{{ product.model }}</p>
-    <p class="price">{{ product.price }}€</p>
-    <p class="brand">Marca: {{ product.brand }}</p>
-    <p class="quantity">Cantidad: {{ product.quantity }}</p>
-    <p class="type">Tipo: {{ product.type }}</p>
+            <p class="title">{{ product.model }}</p>
+            <p class="price">{{ product.price }}€</p>
+            <p class="brand">Marca: {{ product.brand }}</p>
+            <p class="quantity">Cantidad: {{ product.quantity }}</p>
+            <p class="type">Tipo: {{ product.type }}</p>
+            <input class="image" type="image" src="/img/{{ product.image }}"/>
         </div>
 
     {% endfor %}
