@@ -5,6 +5,7 @@ namespace WebShopBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use WebShopBundle\Entity\User;
+use Symfony\Component\HttpFoundation\Response;
 
 
 /**
@@ -27,9 +28,9 @@ class UserController extends Controller
     public function addUser()
     {
         $user = new User();
-        $user -> setName('Alberto');
-        $user -> setEmail('Alberto.cuvi@gmail.com');
-        $user -> setPassword('asdfg');
+        $user -> setName('Alberto4');
+        $user -> setEmail('Alberto4.cuvi@gmail.com');
+        $user -> setPassword('asdfg4');
 
         $user -> setCreateAt(new \DateTime('now'));
         $user -> setUpdateAt(new \DateTime('now'));
@@ -38,7 +39,7 @@ class UserController extends Controller
         $em -> persist($user);
         $em -> flush();
 
-        return new Response("Se ha generado un nuevo usuario" . $user->getId());
+        return new Response("Se ha generado el usuario numero " . $user->getId());
     }
 
 

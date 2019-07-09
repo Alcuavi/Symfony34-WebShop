@@ -1,7 +1,7 @@
 web_shop:
     resource: "@WebShopBundle/Controller/"
     type:     annotation
-    prefix:   /WebShop
+    prefix:   /
 
 app:
     resource: '@AppBundle/Controller/'
